@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <style>
+            #imgs{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-auto-rows: auto;
+                max-width: 600px;
+                margin: 0;
+                grid-template-areas:
+                "section section section section section section"
+                "aside aside main main"
+            }
+
+            #details{
+                border-style: dotted;
+                border-width: 5px;
+                
+            }
+        </style>
+            
+     
+      <script>
+        src="https://anapioficeandfire.com/api/houses/378"
+        
+        //var button = document.getElementById("someButton")
+        //button.addEventListener("click", whatToDoOnClick);
+        //function whatToDoOnClick() {
+        //}
+        </script>
+         <img src="C:\Users\Crystal Mejia\Desktop\Coding Dojo\Week6\Advanced\imgs\stark.jpg" alt="House_Stark" usemap="#workmap" style="width:20%;height:25%;" onclick="myfunction()">
+            <map name="workmap">
+                <area shape="rect" coords="34,44,270,350" alt="House_Stark">
+            </map>
+         <img src="C:\Users\Crystal Mejia\Desktop\Coding Dojo\Week6\Advanced\imgs\targaryen.jpg" alt="House_Targaryen" usemap="#workmap2" style="width:20%;height:25%;" onclick="myfunction()" >
+            <map name="workmap2">
+                <area shape="rect" coords="34,44,270,350" alt="House_Targaryen">
+            </map>
+         <img src="C:\Users\Crystal Mejia\Desktop\Coding Dojo\Week6\Advanced\imgs\lannister.jpg" alt="House_Lannister" usemap="#workmap3" style="width:20%;height:25%;" onclick="myfunction()" >
+            <map name="workmap3">
+                <area shape="rect" coords="34,44,270,350" alt="House_Lannister">
+            </map>
+         <img src="C:\Users\Crystal Mejia\Desktop\Coding Dojo\Week6\Advanced\imgs\baratheon.png" alt="House_Baratheon" usemap="#workmap4" style="width:20%;height:25%;" onclick="myfunction()" > 
+            <map name="workmap4">
+                <area shape="rect" coords="34,44,270,350" alt="House_Baratheon">
+            </map>
+            <div id="details">
+               <h3>House Details</h3> 
+            </div>
+            
+    </body>
+  </html>
+  
