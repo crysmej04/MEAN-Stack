@@ -1,0 +1,14 @@
+<div id="city-block" *ngIf="city_data != undefined && city_data != 'error'">
+  <h2>{{city_data.name}}</h2>
+  <img>
+  <ul>
+  <li>Humidity: {{city_data.main.humidity}}</li>
+  <li>Temperature (Average): {{temps[0]}}° F</li>
+  <li>Temperature (High): {{temps[1]}}° F</li>
+  <li>Temperature (Low): {{temps[2]}}° F</li>
+  <li>Status: {{city_data.weather[0].description}}</li>
+  </ul>
+</div>
+<div *ngIf="city_data == 'error'">
+  <h2>City not found! (Have you made too many api calls for this city?)</h2>
+</div>
