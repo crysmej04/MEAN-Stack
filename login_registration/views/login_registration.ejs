@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            padding-top: 90px;
+            padding: 50px;
+            text-align: center;
+        }
+        #main{
+            background-color: rgb(150, 150, 219);
+        }
+   </style>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'users_app/css/styles.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<title>Login and Registration</title>
+</head>
+<body>
+    <section>
+	<div id="main">
+		<fieldset>
+			<legend><h1 style="color: white">Register</h1></legend>
+			<form method="post" action="/register">
+				<p><label for="email">Email: </label><br>
+				<input type="text" name="email"></p>
+
+				<p><label for="first_name">First Name: </label><br>
+				<input type="text" name="first_name"></p>
+
+				<p><label for="last_name">Last Name: </label><br>
+				<input type="text" name="last_name"></p>
+
+				<p><label for="password">Password: </label><br>
+				<input type="password" name="password"></p>
+
+				<p><label for="password_conf">Confirm password: </label><br>
+				<input type="password" name="password_conf"></p>
+
+				<p><label for="bday">Date of Birth: </label><br>
+				<input type="date" name="bday"></p>
+
+				<input type="submit" name="submit" value="Register">
+            </form>
+            <br><br>
+		</fieldset>
+    </div>
+    <div id="login">
+		<fieldset>
+			<legend><h1>Login</h1></legend>
+			<form method="post" action="/login">
+				<label for="email">Email:</label>
+				<input type="text" name="email">
+				<label for="password">Password: </label>
+				<input type="password" name="password">
+				<input type="submit" name="submit" value="Login">
+			</form>
+		</fieldset>
+	</div>
+	<% if(typeof(errors) != 'undefined' && errors.length > 0){ %>
+		<fieldset>
+			<legend>Errors</legend>
+			<ul>
+			<%errors.forEach(function(error){%>
+				<li><%=error %></li>
+			<% }) %>
+			</ul>
+		</fieldset>
+	<% } %>
+</body>
+</html>

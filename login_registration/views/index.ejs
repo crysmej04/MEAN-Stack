@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<style>
+	body{
+		padding-top: 2%;
+		text-align: center;
+	}
+	a:active {
+		color: white;
+	}
+	a:visited {
+		color: white;
+	}
+</style>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'users_app/css/styles.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<title>Welcome!</title>
+</head>
+<body>
+	<h1>Welcome, <%=user.first_name %>!</h1>
+	<button class="btn btn-default" id="submitbutton"><a href="/logout">Logout</a></button>
+</body>
+</html>
